@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,11 +17,112 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wM2-KQ-dvs">
+                                <rect key="frame" x="35" y="144" width="530" height="67"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
+                                <state key="normal" title="&quot;Calculate!&quot;">
+                                    <color key="titleColor" red="1" green="0.39270631511781229" blue="0.063669472749413258" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fjT-5Q-XJY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="???" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9b-9c-ced">
+                                <rect key="frame" x="35" y="259" width="530" height="147"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="% Alcohol Content Per Beer" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="aJQ-HP-59K">
+                                <rect key="frame" x="30" y="28" width="540" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="Udd-v3-Alg"/>
+                                </connections>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Upo-1P-egw">
+                                <rect key="frame" x="28" y="76" width="544" height="31"/>
+                                <color key="minimumTrackTintColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sliderValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ehu-Q2-a1i"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Upo-1P-egw" firstAttribute="centerX" secondItem="aJQ-HP-59K" secondAttribute="centerX" id="0Vw-8P-ozt"/>
+                            <constraint firstItem="O9b-9c-ced" firstAttribute="width" secondItem="wM2-KQ-dvs" secondAttribute="width" id="2DM-Gf-YyJ"/>
+                            <constraint firstItem="wM2-KQ-dvs" firstAttribute="centerX" secondItem="Upo-1P-egw" secondAttribute="centerX" id="6Xa-5E-Nfe"/>
+                            <constraint firstItem="Upo-1P-egw" firstAttribute="centerX" secondItem="aJQ-HP-59K" secondAttribute="centerX" id="C0e-Tl-ehS"/>
+                            <constraint firstItem="O9b-9c-ced" firstAttribute="width" secondItem="wM2-KQ-dvs" secondAttribute="width" id="CBo-vk-t9J"/>
+                            <constraint firstItem="O9b-9c-ced" firstAttribute="top" secondItem="wM2-KQ-dvs" secondAttribute="bottom" constant="30" id="Cco-nt-ont"/>
+                            <constraint firstItem="O9b-9c-ced" firstAttribute="top" secondItem="wM2-KQ-dvs" secondAttribute="bottom" constant="48" id="F37-up-pW9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O9b-9c-ced" secondAttribute="trailing" constant="15" id="Fmw-sZ-fnn"/>
+                            <constraint firstItem="wM2-KQ-dvs" firstAttribute="top" secondItem="Upo-1P-egw" secondAttribute="bottom" constant="38" id="GZQ-3T-GgX"/>
+                            <constraint firstItem="Upo-1P-egw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="LDF-d8-aMa"/>
+                            <constraint firstItem="O9b-9c-ced" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="PCQ-CG-CZC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aJQ-HP-59K" secondAttribute="trailing" constant="10" id="Piv-gi-Eve"/>
+                            <constraint firstItem="Upo-1P-egw" firstAttribute="width" secondItem="aJQ-HP-59K" secondAttribute="width" id="PjQ-NP-5Qo"/>
+                            <constraint firstItem="wM2-KQ-dvs" firstAttribute="top" secondItem="Upo-1P-egw" secondAttribute="bottom" constant="38" id="PtQ-Ti-hYI"/>
+                            <constraint firstItem="wM2-KQ-dvs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="134" id="QH6-BH-pf0"/>
+                            <constraint firstItem="wM2-KQ-dvs" firstAttribute="centerX" secondItem="Upo-1P-egw" secondAttribute="centerX" id="Qo0-F2-lrb"/>
+                            <constraint firstItem="wM2-KQ-dvs" firstAttribute="centerX" secondItem="Upo-1P-egw" secondAttribute="centerX" id="S9Z-PR-Axv"/>
+                            <constraint firstItem="O9b-9c-ced" firstAttribute="centerX" secondItem="Upo-1P-egw" secondAttribute="centerX" id="Sfg-CW-AcK"/>
+                            <constraint firstItem="wM2-KQ-dvs" firstAttribute="centerX" secondItem="Upo-1P-egw" secondAttribute="centerX" id="WMU-Cz-z2y"/>
+                            <constraint firstItem="O9b-9c-ced" firstAttribute="top" secondItem="Upo-1P-egw" secondAttribute="bottom" constant="43" id="YRv-BB-NpD"/>
+                            <constraint firstItem="O9b-9c-ced" firstAttribute="centerX" secondItem="wM2-KQ-dvs" secondAttribute="centerX" id="Zwk-wh-4kX"/>
+                            <constraint firstItem="aJQ-HP-59K" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-14" id="a3F-0q-yMq"/>
+                            <constraint firstItem="Upo-1P-egw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="65" id="h6c-gX-JDI"/>
+                            <constraint firstItem="wM2-KQ-dvs" firstAttribute="top" secondItem="Upo-1P-egw" secondAttribute="bottom" constant="38" id="iMt-FE-jNM"/>
+                            <constraint firstItem="Upo-1P-egw" firstAttribute="top" secondItem="aJQ-HP-59K" secondAttribute="bottom" constant="8" id="oK2-Qh-kfR"/>
+                            <constraint firstItem="aJQ-HP-59K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="rQ5-Gf-TAs"/>
+                            <constraint firstItem="Upo-1P-egw" firstAttribute="top" secondItem="aJQ-HP-59K" secondAttribute="bottom" constant="34" id="rca-7d-dnv"/>
+                            <constraint firstItem="wM2-KQ-dvs" firstAttribute="top" secondItem="Upo-1P-egw" secondAttribute="bottom" constant="36" id="v1U-BU-AnE"/>
+                            <constraint firstItem="aJQ-HP-59K" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="w3o-oJ-gl6"/>
+                            <constraint firstItem="wM2-KQ-dvs" firstAttribute="top" secondItem="O9b-9c-ced" secondAttribute="bottom" constant="29" id="xUu-OX-azo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="a3F-0q-yMq"/>
+                                <exclude reference="C0e-Tl-ehS"/>
+                                <exclude reference="LDF-d8-aMa"/>
+                                <exclude reference="h6c-gX-JDI"/>
+                                <exclude reference="rca-7d-dnv"/>
+                                <exclude reference="PtQ-Ti-hYI"/>
+                                <exclude reference="QH6-BH-pf0"/>
+                                <exclude reference="Qo0-F2-lrb"/>
+                                <exclude reference="S9Z-PR-Axv"/>
+                                <exclude reference="WMU-Cz-z2y"/>
+                                <exclude reference="iMt-FE-jNM"/>
+                                <exclude reference="v1U-BU-AnE"/>
+                                <exclude reference="xUu-OX-azo"/>
+                                <exclude reference="CBo-vk-t9J"/>
+                                <exclude reference="Cco-nt-ont"/>
+                                <exclude reference="Sfg-CW-AcK"/>
+                                <exclude reference="YRv-BB-NpD"/>
+                                <exclude reference="Zwk-wh-4kX"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xlZ-lR-2ff" appends="YES" id="620-ks-8lW"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="beerCountSlider" destination="Upo-1P-egw" id="cDP-b6-HKh"/>
+                        <outlet property="beerPercentTextField" destination="aJQ-HP-59K" id="Fie-5s-IOu"/>
+                        <outlet property="resultLabel" destination="O9b-9c-ced" id="OmK-JR-0bG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xlZ-lR-2ff"/>
             </objects>
+            <point key="canvasLocation" x="304" y="337"/>
         </scene>
     </scenes>
 </document>
