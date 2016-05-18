@@ -13,6 +13,7 @@
 		04E5462A1CECD5280050404C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E546281CECD5280050404C /* Main.storyboard */; };
 		04E5462C1CECD5280050404C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E5462B1CECD5280050404C /* Assets.xcassets */; };
 		04E5462F1CECD5280050404C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E5462D1CECD5280050404C /* LaunchScreen.storyboard */; };
+		04E546381CECD8040050404C /* WhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E546371CECD8040050404C /* WhiskeyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		04E5462B1CECD5280050404C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04E5462E1CECD5280050404C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04E546301CECD5280050404C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04E546361CECD8040050404C /* WhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiskeyViewController.h; sourceTree = "<group>"; };
+		04E546371CECD8040050404C /* WhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiskeyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				04E546231CECD5280050404C /* AppDelegate.m */,
 				04E546251CECD5280050404C /* ViewController.h */,
 				04E546261CECD5280050404C /* ViewController.m */,
+				04E546361CECD8040050404C /* WhiskeyViewController.h */,
+				04E546371CECD8040050404C /* WhiskeyViewController.m */,
 				04E546281CECD5280050404C /* Main.storyboard */,
 				04E5462B1CECD5280050404C /* Assets.xcassets */,
 				04E5462D1CECD5280050404C /* LaunchScreen.storyboard */,
@@ -151,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E546271CECD5280050404C /* ViewController.m in Sources */,
+				04E546381CECD8040050404C /* WhiskeyViewController.m in Sources */,
 				04E546241CECD5280050404C /* AppDelegate.m in Sources */,
 				04E546211CECD5280050404C /* main.m in Sources */,
 			);
@@ -301,6 +307,7 @@
 				04E546351CECD5280050404C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
