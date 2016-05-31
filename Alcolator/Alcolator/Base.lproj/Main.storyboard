@@ -319,5 +319,119 @@
             </objects>
             <point key="canvasLocation" x="-231" y="391"/>
         </scene>
+        <!--Whiskey View Controller-->
+        <scene sceneID="Clg-ei-kQ2">
+            <objects>
+                <viewController id="ZhZ-xo-wjA" customClass="WhiskeyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cd3-19-jOf"/>
+                        <viewControllerLayoutGuide type="bottom" id="cLZ-TO-hbv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c8R-Uz-AF7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ef-LO-O5b">
+                                <rect key="frame" x="35" y="144" width="530" height="67"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
+                                <state key="normal" title="&quot;Calculate!&quot;">
+                                    <color key="titleColor" red="1" green="0.39270631509999998" blue="0.063669472749999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="ZhZ-xo-wjA" eventType="touchUpInside" id="eBj-d1-oRk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="???" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9e-v9-G8U">
+                                <rect key="frame" x="35" y="259" width="530" height="147"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="% Alcohol Content Per Beer" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="H7B-Kj-k6z">
+                                <rect key="frame" x="30" y="28" width="540" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDidChange:" destination="ZhZ-xo-wjA" eventType="editingChanged" id="H0H-q3-Eaj"/>
+                                </connections>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="ooK-Rf-lUZ">
+                                <rect key="frame" x="28" y="84" width="544" height="31"/>
+                                <color key="minimumTrackTintColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sliderValueDidChange:" destination="ZhZ-xo-wjA" eventType="valueChanged" id="2hP-wY-alX"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="ooK-Rf-lUZ" firstAttribute="centerX" secondItem="H7B-Kj-k6z" secondAttribute="centerX" id="22b-wR-Bkl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H7B-Kj-k6z" secondAttribute="trailing" constant="10" id="31b-rk-qTm"/>
+                            <constraint firstItem="4ef-LO-O5b" firstAttribute="centerX" secondItem="ooK-Rf-lUZ" secondAttribute="centerX" id="3aa-Ws-y9q"/>
+                            <constraint firstItem="S9e-v9-G8U" firstAttribute="top" secondItem="ooK-Rf-lUZ" secondAttribute="bottom" constant="43" id="6Um-1u-yK4"/>
+                            <constraint firstItem="4ef-LO-O5b" firstAttribute="top" secondItem="Cd3-19-jOf" secondAttribute="bottom" constant="134" id="9tE-gq-6Ra"/>
+                            <constraint firstItem="H7B-Kj-k6z" firstAttribute="top" secondItem="Cd3-19-jOf" secondAttribute="bottom" constant="-14" id="EDA-i5-TCu"/>
+                            <constraint firstItem="S9e-v9-G8U" firstAttribute="width" secondItem="4ef-LO-O5b" secondAttribute="width" id="EYX-Cu-05f"/>
+                            <constraint firstItem="4ef-LO-O5b" firstAttribute="top" secondItem="ooK-Rf-lUZ" secondAttribute="bottom" constant="38" id="IOg-0o-wa4"/>
+                            <constraint firstItem="ooK-Rf-lUZ" firstAttribute="width" secondItem="c8R-Uz-AF7" secondAttribute="width" id="Ivl-ur-Ek7"/>
+                            <constraint firstItem="S9e-v9-G8U" firstAttribute="centerX" secondItem="4ef-LO-O5b" secondAttribute="centerX" id="Kh9-9V-qOZ"/>
+                            <constraint firstItem="4ef-LO-O5b" firstAttribute="centerX" secondItem="ooK-Rf-lUZ" secondAttribute="centerX" id="Kny-0j-dGj"/>
+                            <constraint firstItem="4ef-LO-O5b" firstAttribute="top" secondItem="ooK-Rf-lUZ" secondAttribute="bottom" constant="36" id="Lpa-p2-tgS"/>
+                            <constraint firstItem="ooK-Rf-lUZ" firstAttribute="top" secondItem="H7B-Kj-k6z" secondAttribute="bottom" constant="8" id="NA4-K6-Eu7"/>
+                            <constraint firstItem="ooK-Rf-lUZ" firstAttribute="width" secondItem="H7B-Kj-k6z" secondAttribute="width" id="Ncy-go-nYV"/>
+                            <constraint firstItem="ooK-Rf-lUZ" firstAttribute="centerX" secondItem="H7B-Kj-k6z" secondAttribute="centerX" id="QZN-hA-dbe"/>
+                            <constraint firstItem="4ef-LO-O5b" firstAttribute="top" secondItem="ooK-Rf-lUZ" secondAttribute="bottom" constant="38" id="Spf-dT-m2R"/>
+                            <constraint firstItem="S9e-v9-G8U" firstAttribute="top" secondItem="4ef-LO-O5b" secondAttribute="bottom" constant="30" id="YVk-kq-Ab5"/>
+                            <constraint firstItem="4ef-LO-O5b" firstAttribute="centerX" secondItem="ooK-Rf-lUZ" secondAttribute="centerX" id="b2a-sR-QLi"/>
+                            <constraint firstItem="4ef-LO-O5b" firstAttribute="top" secondItem="S9e-v9-G8U" secondAttribute="bottom" constant="29" id="cfw-8O-aVh"/>
+                            <constraint firstItem="S9e-v9-G8U" firstAttribute="top" secondItem="4ef-LO-O5b" secondAttribute="bottom" constant="48" id="eBc-8V-VmU"/>
+                            <constraint firstItem="4ef-LO-O5b" firstAttribute="centerX" secondItem="ooK-Rf-lUZ" secondAttribute="centerX" id="eX6-mm-h0Q"/>
+                            <constraint firstItem="H7B-Kj-k6z" firstAttribute="top" secondItem="Cd3-19-jOf" secondAttribute="bottom" constant="8" id="iAY-Cb-7ib"/>
+                            <constraint firstItem="H7B-Kj-k6z" firstAttribute="leading" secondItem="c8R-Uz-AF7" secondAttribute="leadingMargin" constant="10" id="khQ-RZ-Hdh"/>
+                            <constraint firstItem="S9e-v9-G8U" firstAttribute="leading" secondItem="c8R-Uz-AF7" secondAttribute="leadingMargin" constant="15" id="onA-77-y70"/>
+                            <constraint firstItem="ooK-Rf-lUZ" firstAttribute="top" secondItem="Cd3-19-jOf" secondAttribute="bottom" constant="65" id="pDn-Ka-pCM"/>
+                            <constraint firstItem="S9e-v9-G8U" firstAttribute="width" secondItem="4ef-LO-O5b" secondAttribute="width" id="rHC-bO-zdw"/>
+                            <constraint firstItem="ooK-Rf-lUZ" firstAttribute="top" secondItem="H7B-Kj-k6z" secondAttribute="bottom" constant="34" id="rtt-Uc-E02"/>
+                            <constraint firstItem="4ef-LO-O5b" firstAttribute="top" secondItem="ooK-Rf-lUZ" secondAttribute="bottom" constant="38" id="v2N-uE-fL9"/>
+                            <constraint firstItem="S9e-v9-G8U" firstAttribute="centerX" secondItem="ooK-Rf-lUZ" secondAttribute="centerX" id="wS5-4M-bxd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="S9e-v9-G8U" secondAttribute="trailing" constant="15" id="z6b-n6-Pab"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EDA-i5-TCu"/>
+                                <exclude reference="22b-wR-Bkl"/>
+                                <exclude reference="Ivl-ur-Ek7"/>
+                                <exclude reference="pDn-Ka-pCM"/>
+                                <exclude reference="rtt-Uc-E02"/>
+                                <exclude reference="v2N-uE-fL9"/>
+                                <exclude reference="9tE-gq-6Ra"/>
+                                <exclude reference="eX6-mm-h0Q"/>
+                                <exclude reference="3aa-Ws-y9q"/>
+                                <exclude reference="Kny-0j-dGj"/>
+                                <exclude reference="IOg-0o-wa4"/>
+                                <exclude reference="Lpa-p2-tgS"/>
+                                <exclude reference="cfw-8O-aVh"/>
+                                <exclude reference="rHC-bO-zdw"/>
+                                <exclude reference="YVk-kq-Ab5"/>
+                                <exclude reference="wS5-4M-bxd"/>
+                                <exclude reference="6Um-1u-yK4"/>
+                                <exclude reference="Kh9-9V-qOZ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="beerCountSlider" destination="ooK-Rf-lUZ" id="x1f-XK-SPL"/>
+                        <outlet property="beerPercentTextField" destination="H7B-Kj-k6z" id="AiV-ZO-Jzq"/>
+                        <outlet property="resultLabel" destination="S9e-v9-G8U" id="uHA-b0-fGk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gMv-7u-Dge" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942" y="337"/>
+        </scene>
     </scenes>
 </document>
