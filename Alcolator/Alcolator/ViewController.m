@@ -11,7 +11,6 @@
 @interface ViewController ()
 
 
-
 @end
 
 @implementation ViewController
@@ -43,16 +42,17 @@
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
     
     NSLog(@"Slider value changed to %f", sender.value);
+    
     [self.beerPercentTextField resignFirstResponder];
 
     }
-
 
 - (IBAction)buttonPressed:(id)sender {
 
     [self.beerPercentTextField resignFirstResponder];
     
     // first, calculate how much alcohol is in all those beers...
+    
     int numberOfBeers = self.beerCountSlider.value;
     int ouncesInOneBeerGlass = 12;  //assume they are 12oz beer bottles
     float alcoholPercentageOfBeer = [self.beerPercentTextField.text floatValue] / 100;
@@ -83,8 +83,12 @@
             }
     
     // generate the result text, and display it on the label
+    
     NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@ of wine.", nil), numberOfBeers, beerText,  [self.beerPercentTextField.text floatValue], numberOfWineGlassesForEquivalentAlcoholAmount, wineText];
     self.resultLabel.text = resultText;
+    
+    self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Wine (%.1f %@)", nil), numberOfWineGlassesForEquivalentAlcoholAmount, wineText];
+
     }
     
     
