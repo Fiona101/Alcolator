@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04DDF3381CF88ECB00F5055A /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DDF3371CF88ECB00F5055A /* MainMenuViewController.m */; };
 		04E546211CECD5280050404C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E546201CECD5280050404C /* main.m */; };
 		04E546241CECD5280050404C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E546231CECD5280050404C /* AppDelegate.m */; };
 		04E546271CECD5280050404C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E546261CECD5280050404C /* ViewController.m */; };
@@ -18,8 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04DDF3361CF88ECB00F5055A /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
-		04DDF3371CF88ECB00F5055A /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		04E5461C1CECD5280050404C /* Alcolator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alcolator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E546201CECD5280050404C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04E546221CECD5280050404C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,8 +72,6 @@
 				04E5462D1CECD5280050404C /* LaunchScreen.storyboard */,
 				04E546301CECD5280050404C /* Info.plist */,
 				04E5461F1CECD5280050404C /* Supporting Files */,
-				04DDF3361CF88ECB00F5055A /* MainMenuViewController.h */,
-				04DDF3371CF88ECB00F5055A /* MainMenuViewController.m */,
 			);
 			path = Alcolator;
 			sourceTree = "<group>";
@@ -164,7 +159,6 @@
 				04E546381CECD8040050404C /* WhiskeyViewController.m in Sources */,
 				04E546241CECD5280050404C /* AppDelegate.m in Sources */,
 				04E546211CECD5280050404C /* main.m in Sources */,
-				04DDF3381CF88ECB00F5055A /* MainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
