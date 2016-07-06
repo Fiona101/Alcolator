@@ -44,6 +44,9 @@
     NSLog(@"Slider value changed to %f", sender.value);
     
     [self.beerPercentTextField resignFirstResponder];
+    
+    //self.navigationItem.title = [NSString stringWithFormat:@"Whiskey (%.1f)",floorf(sender.value)];
+    [self buttonPressed: nil];
 
     }
 
